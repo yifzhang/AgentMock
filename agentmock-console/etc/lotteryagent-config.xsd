@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="agentClass" type="xs:string"/>
+	<xs:element name="agentName">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="description">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ftpUrl">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="lotteryAgent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="description"/>
+				<xs:element ref="agentName"/>
+				<xs:element ref="agentClass"/>
+				<xs:element ref="ftpUrl" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="lotteryAgentApp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="lotteryAgent" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

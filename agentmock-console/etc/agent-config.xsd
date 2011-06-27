@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="agent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element ref="path"/>
+				<xs:element ref="title"/>
+				<xs:element ref="digestKey"/>
+				<xs:element ref="issues"/>
+				<xs:element ref="getTicketResult"/>
+				<xs:element ref="getAwardTickets"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="agents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="agent" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="awardMoney" type="xs:string"/>
+	<xs:element name="awardType" type="xs:string"/>
+	<xs:element name="bonusCode" type="xs:string"/>
+	<xs:element name="digestKey" type="xs:string"/>
+	<xs:element name="endTime" type="xs:string"/>
+	<xs:element name="getAwardTickets">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="issueAward" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="getTicketResult">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sync"/>
+				<xs:element ref="resultCode"/>
+				<xs:element ref="maxTicketNum"/>
+				<xs:element ref="ticketNums"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="issue">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="issueType"/>
+				<xs:element ref="issueNumber"/>
+				<xs:element ref="startTime"/>
+				<xs:element ref="endTime"/>
+				<xs:element ref="status"/>
+				<xs:element ref="bonusCode"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="issueAward">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="issueType"/>
+				<xs:element ref="issueNumber"/>
+				<xs:element ref="tickets"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="issueNumber" type="xs:string"/>
+	<xs:element name="issueType" type="xs:string"/>
+	<xs:element name="issues">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="issue" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="maxTicketNum" type="xs:string"/>
+	<xs:element name="name">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="path">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="resultCode" type="xs:string"/>
+	<xs:element name="startTime" type="xs:string"/>
+	<xs:element name="status" type="xs:string"/>
+	<xs:element name="sync" type="xs:string"/>
+	<xs:element name="ticket">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ticketNo"/>
+				<xs:element ref="awardType"/>
+				<xs:element ref="awardMoney"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ticketNo" type="xs:string"/>
+	<xs:element name="ticketNum" type="xs:string"/>
+	<xs:element name="ticketNums">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ticketNum" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="tickets">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ticket" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="title">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

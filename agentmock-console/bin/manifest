@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Main-Class: com.taobao.caipiao.agentmock.main.JettyLauncher
+Class-Path: .\lib\ant-1.6.5.jar .\lib\castor-1.3.2-xml.jar .\lib\castor-core-1.3.2.jar \
+ .\lib\commons-beanutils-1.8.0.jar .\lib\commons-collections-3.2.1.jar \ 
+ .\lib\commons-configuration-1.6.jar .\lib\commons-digester-1.8.jar \ 
+ .\lib\commons-httpclient-3.1.jar .\lib\commons-lang-2.5.jar .\lib\commons-logging-1.1.1.jar .\lib\commons-codec-1.4.jar \ 
+ .\lib\core-3.1.1.jar .\lib\dom4j-1.6.1.jar .\lib\easyconf-0.9.5.jar .\lib\jetty-6.1.16.jar .\lib\jetty-util-6.1.16.jar .\lib\jsp-2.1-6.1.9.jar .\lib\jsp-api-2.1.jar .\lib\lang-1.0.jar \
+ .\lib\log4j-1.2.14.jar .\lib\servlet-api-2.5-20081211.jar .\lib\xstream-1.3.1.jar
+

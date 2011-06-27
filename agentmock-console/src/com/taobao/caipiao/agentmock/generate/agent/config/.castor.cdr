@@ -1,0 +1,11 @@
+#Sat May 21 21:42:01 CST 2011
+com.taobao.caipiao.agentmock.generate.agent.config.Issues=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.IssuesDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.TicketNums=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.TicketNumsDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.Tickets=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.TicketsDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.GetAwardTickets=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.GetAwardTicketsDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.Ticket=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.TicketDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.Issue=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.IssueDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.GetTicketResult=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.GetTicketResultDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.IssueAward=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.IssueAwardDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.Agents=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.AgentsDescriptor
+com.taobao.caipiao.agentmock.generate.agent.config.Agent=com.taobao.caipiao.agentmock.generate.agent.config.descriptors.AgentDescriptor

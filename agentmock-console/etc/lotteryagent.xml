@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lotteryAgentApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="lotteryagent-config.xsd">
+    <lotteryAgent>
+        <description>BjfcAgent</description>
+        <agentName>bjfc</agentName>
+        <agentClass>com.taobao.caipiao.agentmock.core.commu.bjfc.BjfcAgentComm</agentClass>
+        <ftpUrl>10.32.20.40:21</ftpUrl>
+    </lotteryAgent>
+    <lotteryAgent>
+        <description>CqfcAgent</description>
+        <agentName>cqfc</agentName>
+        <agentClass>com.taobao.caipiao.agentmock.core.commu.hengpeng.HengPengAgentComm</agentClass>
+    </lotteryAgent>
+    <lotteryAgent>
+        <description>XgjxAgent</description>
+        <agentName>xgjx</agentName>
+        <agentClass>com.taobao.caipiao.agentmock.core.commu.xgjx.XgjxAgentComm</agentClass>
+    </lotteryAgent>
+</lotteryAgentApp>
+    

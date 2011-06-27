@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\caipiao\workspace\workspaces\spring_test\agentmock-console\etc\agent-config.xsd">
+	<agent>
+		<name>bjfc</name>
+		<path>/bjfc.am</path>
+		<title>bjfc</title>
+		<digestKey>1234567890ABCDEF</digestKey>
+		<!-- 获取彩期和获取中奖号码都是这个消息体 -->
+		<issues>
+			<issue>
+				<issueType>ssq</issueType>
+				<issueNumber>2011059</issueNumber>
+				<startTime/>
+				<endTime/>
+				<status>1</status>
+				<bonusCode/>
+			</issue>
+		</issues>
+		<!-- 
+		这里可以将预定操作和查询出票结果操作合成为一个消息体，主要就是票号，及返回内容！
+		sync字段仅仅在预定请求的时候才用的到：是否是同步出票，如果是同步，则ticketNum字段有效！
+		由于整个批次保证要么成功要么失败的一致性，因此只有一个resultCode字段
+		-->
+		<getTicketResult>
+			<sync>true</sync>
+			<resultCode>0</resultCode>
+			<maxTicketNum/>
+			<ticketNums>
+				<!-- 支持逗号分隔多个number
+					另外，彩票序列号彩期随机生成的策略，这里不再配置-->
+				<ticketNum/>
+			</ticketNums>
+		</getTicketResult>
+		<!-- 在配置了彩期后，同时配置好该项，从而保证在投注的时候可以投上该号码！ -->
+		<getAwardTickets>
+			<issueAward>
+				<issueType/>
+				<issueNumber/>
+				<tickets>
+					<ticket>
+						<ticketNo/>
+						<!-- 0 为小奖，大于0为大奖 -->
+						<awardType/>
+						<!-- 税前和税后一样的钱数 -->
+						<awardMoney/>
+					</ticket>
+				</tickets>
+			</issueAward>
+		</getAwardTickets>
+	</agent>
+	<agent>
+		<name>cqfc</name>
+		<path>/cqfc.am</path>
+		<title>cqfc</title>
+		<digestKey>023005</digestKey>
+		<!-- 获取彩期和获取中奖号码都是这个消息体 -->
+		<issues>
+			<issue>
+				<!-- ssc,ssq -->
+				<issueType>ssq</issueType>
+				<issueNumber>2011069</issueNumber>
+				<!-- 2007-05-10 06:00:00 -->
+				<startTime>2011-06-15 09:45:00</startTime>
+				<endTime>2011-06-18 09:45:00</endTime>
+				<!-- 该字段不用些，其值将根据获取彩期或者中奖号码在代码中自动设置 -->
+				<status></status>
+				<!-- 红球# 篮球 -->
+				<bonusCode>03,06,07,11,13,33#10</bonusCode>
+			</issue>
+			<issue>
+				<!-- ssc,ssq -->
+				<issueType>ssq</issueType>
+				<issueNumber>2011067</issueNumber>
+				<!-- 2007-05-10 06:00:00 -->
+				<startTime></startTime>
+				<endTime></endTime>
+				<!-- 该字段不用些，其值将根据获取彩期或者中奖号码在代码中自动设置 -->
+				<status>5</status>
+				<!-- 红球# 篮球 -->
+				<bonusCode>03,06,07,11,13,33#10</bonusCode>
+			</issue>
+			<issue>
+				<!-- ssc,ssq -->
+				<issueType>ssq</issueType>
+				<issueNumber>2011072</issueNumber>
+				<!-- 2007-05-10 06:00:00 -->
+				<startTime>2011-06-21 09:45:00</startTime>
+				<endTime>2011-06-23 09:45:00</endTime>
+				<!-- 该字段不用些，其值将根据获取彩期或者中奖号码在代码中自动设置 -->
+				<status>5</status>
+				<!-- 红球# 篮球 -->
+				<bonusCode>03,06,07,11,13,33#10</bonusCode>
+			</issue>
+		</issues>
+		<!-- 
+			这里可以将预定操作和查询出票结果操作合成为一个消息体，主要就是票号，及返回内容！
+			sync字段仅仅在预定请求的时候才用的到(true为同步，false为异步)：是否是同步出票，如果是同步，则ticketNum字段有效！
+			由于整个批次保证要么成功要么失败的一致性，因此只有一个resultCode字段
+		-->
+		<getTicketResult>
+			<sync>false</sync>
+			<!-- 如果为0000则为成功，负责按照 CQFCStatusEnum中的代码定义进行配置-->
+			<resultCode>0000</resultCode>
+			<!-- 如果设置了，则为每次最多可以出的票数 -->
+			<maxTicketNum/>
+			<ticketNums>
+				<!-- 
+					支持逗号分隔多个number; 另外，彩票序列号彩期随机生成的策略，这里不再配置
+				-->
+				<ticketNum/>
+				<ticketNum/>
+			</ticketNums>
+		</getTicketResult>
+		<!-- 在配置了彩期后，同时配置好该项，从而保证在投注的时候可以投上该号码！ -->
+		<getAwardTickets>
+			<issueAward>
+				<issueType>ssq</issueType>
+				<issueNumber>2011072</issueNumber>
+				<tickets>
+					<ticket>
+						<!-- 就是lottery_ll_order表中的lottery_order_id -->
+						<ticketNo></ticketNo>
+						<!-- 0 为小奖，大于0为大奖 -->
+						<awardType>0</awardType>
+						<!-- 税前和税后一样的钱数: 单注钱*倍数-->
+						<awardMoney>5</awardMoney>
+					</ticket>
+				</tickets>
+			</issueAward>
+		</getAwardTickets>
+	</agent>
+	<agent>
+		<name>xgjx</name>
+		<path>/xgjx.am</path>
+		<title>xgjx</title>
+		<digestKey>helloworld</digestKey>
+		<!-- 获取彩期和获取中奖号码都是这个消息体 -->
+		<issues>
+			<issue>
+				<issueType/>
+				<issueNumber/>
+				<startTime/>
+				<endTime/>
+				<status/>
+				<bonusCode/>
+			</issue>
+		</issues>
+		<getTicketResult>
+			<sync/>
+			<resultCode/>
+			<maxTicketNum/>
+			<ticketNums>
+				<!-- 支持逗号分隔多个number
+					另外，彩票序列号彩期随机生成的策略，这里不再配置-->
+				<ticketNum/>
+				<ticketNum/>
+			</ticketNums>
+		</getTicketResult>
+		<!-- 在配置了彩期后，同时配置好该项，从而保证在投注的时候可以投上该号码！ -->
+		<getAwardTickets>
+			<issueAward>
+				<issueType/>
+				<issueNumber/>
+				<tickets>
+					<ticket>
+						<ticketNo/>
+						<!-- 0 为小奖，大于0为大奖 -->
+						<awardType/>
+						<!-- 税前和税后一样的钱数 -->
+						<awardMoney/>
+					</ticket>
+				</tickets>
+			</issueAward>
+		</getAwardTickets>
+	</agent>
+</agents>

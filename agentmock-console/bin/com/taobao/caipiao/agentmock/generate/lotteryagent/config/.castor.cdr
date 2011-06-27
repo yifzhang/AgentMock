@@ -1,0 +1,3 @@
+#Mon May 16 15:12:20 CST 2011
+com.taobao.caipiao.agentmock.generate.lotteryagent.config.LotteryAgentApp=com.taobao.caipiao.agentmock.generate.lotteryagent.config.descriptors.LotteryAgentAppDescriptor
+com.taobao.caipiao.agentmock.generate.lotteryagent.config.LotteryAgent=com.taobao.caipiao.agentmock.generate.lotteryagent.config.descriptors.LotteryAgentDescriptor
