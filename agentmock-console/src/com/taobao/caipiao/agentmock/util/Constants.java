@@ -11,7 +11,9 @@ public final class Constants {
 	public static final String _CHARSET_8859	   = "8859_1";
 	public static final String _COMMAND_URL_PREFIX	   = PropUtil.getString("agentmock.command.url.prefix");
 	public static final String _COMMUNICATE_URL_PREFIX	   = PropUtil.getString("agentmock.commu.url.prefix");
+
 	public final static String _FILE_PATH		 	 = (System.getProperty("os.name").toUpperCase().indexOf("WINDOWS") == -1) ? PropUtil.getString("file.root") : PropUtil.getString("file.root.windows");
+	public final static boolean _SEND_MSG_SWITCH      = PropUtil.getBoolean("agentmock.sendmsg.switch");
 	public static final String _SEND_MSG_PATH  		 = PropUtil.getString("agentmock.sendmsg.path");
 	public static final String _SEND_MSG_FILE  		 = PropUtil.getString("agentmock.sendmsg.file");
 	public static final String _SEND_MSG_AGENT_URL   = PropUtil.getString("agentmock.sendmsg.agent.url");

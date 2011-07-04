@@ -22,6 +22,34 @@ public class PropUtil {
 		return value;
 	}
 	
+	public static String[] getStringArray(String name){
+		return getStringArray(name, null);
+	}
+	
+	public static String[] getStringArray(String name,String orgWebId){
+		String[] value = null;
+		if(orgWebId != null)
+			value = EasyConf.getConfiguration(orgWebId,_BASE).getProperties().getStringArray(name);
+		else
+			value = EasyConf.getConfiguration(_BASE).getProperties().getStringArray(name);
+		return value;
+	}
+	
+	public static boolean getBoolean(String name){
+		return getBoolean(name, null);
+	}
+	
+	public static boolean getBoolean(String name,String orgWebId){
+		boolean value = false;
+		try{
+			if(orgWebId != null)
+				value = EasyConf.getConfiguration(orgWebId,_BASE).getProperties().getBoolean(name);
+			else
+				value = EasyConf.getConfiguration(_BASE).getProperties().getBoolean(name);
+		}catch(Exception e){}
+		return value;
+	}
+	
 	public static Class getClass(String name){
 		return getClass(name,null);
 	}

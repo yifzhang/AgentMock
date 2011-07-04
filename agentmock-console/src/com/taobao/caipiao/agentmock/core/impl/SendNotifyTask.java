@@ -92,9 +92,9 @@ public class SendNotifyTask implements AgentMockTask{
 				throw new Exception("地址调用不成功---> 状态：" + statusCode);
 			}
 		} catch (Exception ex) {
-			logger.error("communication with bjfc has error:\n Error Message->"
+			logger.error("communication with agent has error:\n Error Message->"
 					+ ex.getMessage() + "\nURL->" + serviceUrl
-					+ "; lotteryAgent =>bjfc; request is: " + requestXml);
+					+ "; lotteryAgent =>agent; request is: " + requestXml);
 			throw ex;
 		} finally {
 			// 释放连接

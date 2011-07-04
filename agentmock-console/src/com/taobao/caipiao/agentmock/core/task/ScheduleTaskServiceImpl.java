@@ -15,7 +15,7 @@ public class ScheduleTaskServiceImpl implements ScheduleTaskService {
 	
 	@Override
 	public void runScheduleTask() {
-		logger.info("start running Daily Task");
+		logger.info("start running runScheduleTask");
 		if(!StringUtil.isEmpty(PropUtil.getString("agentmock.setting.schedule.task"))){
 			String name = PropUtil.getString("agentmock.setting.schedule.task");
 			if(name != null){
@@ -29,7 +29,7 @@ public class ScheduleTaskServiceImpl implements ScheduleTaskService {
 				}
 			}
 		}
-		logger.info("end running Daily Task");
+		logger.info("end running runScheduleTask");
 	}
 
 }
