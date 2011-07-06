@@ -50,6 +50,56 @@ public class PropUtil {
 		return value;
 	}
 	
+	public static int getInt(String name){
+		return getInt(name, null);
+	}
+	
+	public static int getInt(String name, int defaulted){
+		int value = getInt(name, null);
+		return (value != Integer.MIN_VALUE) ? value : defaulted;
+	}
+	
+	public static int getInt(String name,String orgWebId){
+		int value = Integer.MIN_VALUE;
+		try{
+			if(orgWebId != null)
+				value = EasyConf.getConfiguration(orgWebId,_BASE).getProperties().getInt(name);
+			else
+				value = EasyConf.getConfiguration(_BASE).getProperties().getInt(name);
+		}catch(Exception e){}
+		return value;
+	}
+	
+	public static int getInt(String name,String orgWebId, int defaulted){
+		int value = getInt(name, orgWebId);
+		return (value != Integer.MIN_VALUE) ? value : defaulted;
+	}
+	
+	public static long getLong(String name){		
+		return getLong(name, null);
+	}
+	
+	public static long getLong(String name, long defaulted){
+		long value = getLong(name, null);
+		return (value != Long.MIN_VALUE) ? value : defaulted;
+	}
+	
+	public static long getLong(String name,String orgWebId){
+		long value = Long.MIN_VALUE;
+		try{
+			if(orgWebId != null)
+				value = EasyConf.getConfiguration(orgWebId,_BASE).getProperties().getLong(name);
+			else
+				value = EasyConf.getConfiguration(_BASE).getProperties().getLong(name);
+		}catch(Exception e){}
+		return value;
+	}
+	
+	public static long getLong(String name,String orgWebId, long defaulted){
+		long value = getLong(name, orgWebId);
+		return (value != Long.MIN_VALUE) ? value : defaulted;
+	}
+	
 	public static Class getClass(String name){
 		return getClass(name,null);
 	}
