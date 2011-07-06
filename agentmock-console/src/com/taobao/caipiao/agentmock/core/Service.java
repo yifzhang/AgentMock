@@ -51,9 +51,7 @@ public class Service extends HttpServlet implements Servlet{
 				final ScheduledExecutorService scheduler = Executors
 				.newScheduledThreadPool(2);
 				final Runnable beeper = new Runnable(){
-					int count = 0;
 					public void run(){
-						count++;
 						scheduleService.runScheduleTask();
 					}
 				};
